@@ -44,9 +44,6 @@ public class SinhSeries {
         scanner.close();
     }
 
-    // ===== Методы для безопасного ввода =====
-
-    // Чтение double с проверкой типа
     private static double readDouble(Scanner scanner, String message) {
         while (true) {
             System.out.print(message);
@@ -54,12 +51,11 @@ public class SinhSeries {
                 return scanner.nextDouble();
             } else {
                 System.out.println("Ошибка: введите число (например 0,5)");
-                scanner.next(); // очистка некорректного ввода
+                scanner.next();
             }
         }
     }
 
-    // Чтение int с проверкой и минимальным значением
     private static int readInt(Scanner scanner, int min) {
         while (true) {
             System.out.print("Введите n (n > 0): ");
@@ -77,7 +73,6 @@ public class SinhSeries {
         }
     }
 
-    // Чтение положительного double
     private static double Double(Scanner scanner) {
         while (true) {
             double value = readDouble(scanner, "Введите e (e > 0): ");
